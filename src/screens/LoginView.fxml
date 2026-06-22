@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="600.0" prefWidth="500.0" spacing="15.0" styleClass="side-form" stylesheets="@../loginDesign.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screens.AuthController">
+    <padding><Insets bottom="30.0" left="30.0" right="30.0" top="30.0" /></padding>
+    <ImageView fitHeight="135.0" fitWidth="146.0" pickOnBounds="true" preserveRatio="true">
+
+        <image>
+            <Image url="@images/q1-removebg-preview.png" />
+        </image>
+
+        <VBox.margin>
+            <Insets bottom="10.0" />
+        </VBox.margin>
+
+    </ImageView>
+
+    <Label fx:id="subTitle" text="Espace Connexion" textFill="#2c7dd4"><font><Font name="Berlin Sans FB" size="20.0" /></font></Label>
+    <TextField fx:id="nameField" managed="false" prefWidth="250.0" promptText="Nom complet" visible="false" />
+    <TextField fx:id="emailField" prefWidth="200.0" promptText="Votre adresse Email" />
+    <PasswordField fx:id="passwordField" prefWidth="200.0" promptText="Votre mot de passe" />
+    <PasswordField fx:id="confirmPasswordField" managed="false" prefWidth="250.0" promptText="Confirmer le mot de passe" visible="false" />
+    <Button fx:id="actionButton" onAction="#handleAction" prefWidth="250.0" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold;" text="🔑 Se connecter" />
+    <Button fx:id="toggleButton" onAction="#handleToggle" style="-fx-background-color: transparent; -fx-text-fill: #2980b9; -fx-underline: true;" text="Pas encore de compte ? Créer un compte" textFill="#ae8888" />
+    <Label fx:id="statusLabel" alignment="CENTER" wrapText="true" />
+</VBox>

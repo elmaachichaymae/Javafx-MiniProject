@@ -1,0 +1,40 @@
+.side-form{
+    -fx-background-color: linear-gradient(to bottom right,#dad2d2,#6d96b4);
+    -fx-border-color: #000;
+    -fx-border-width: .4px .2px .4px .4px ;
+}
+top-form{
+    -fx-background-color: linear-gradient(to bottom right,#6c6161,#dad2d2);
+    -fx-border-color: #000;
+
+}
+.nav{
+    -fx-background-color: linear-gradient(to bottom right,#6d96b4,#dad2d2);
+
+}
+.nav-border{
+    -fx-border-color:#000;
+    -fx-border-width:0px .2px .4px .4px;
+}
+.shadow{
+    -fx-effect:dropshadow(three-pass-box, rgba(0,0,0,0.5),8,0,0,0);
+}
+
+.btn-deco{
+    -fx-background-color: linear-gradient(to bottom right, #48739a,#dad2d2);
+
+}
+.btn-deco-border{
+    -fx-border-color:#000;
+    -fx-border-width:0px .2px .4px .4px;
+}
+.bar{
+    -fx-background-color: linear-gradient(to bottom right, #b6c5d1,#dad2d2);
+    -fx-padding:20;
+    -fx-background-radius:10;
+
+}
+.bar-border{
+    -fx-border-color:#000;
+    -fx-border-width:0px .2px .4px .4px;
+}

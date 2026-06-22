@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainBorderPane" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screens.MainController">
+    <left>
+        <VBox prefWidth="220.0" spacing="15.0" styleClass="side-form" stylesheets="@../loginDesign.css">
+            <padding><Insets bottom="20.0" left="15.0" right="15.0" top="20.0" /></padding>
+            <Label text="Care Dash" textFill="#180101"><font><Font name="Berlin Sans FB Demi Bold" size="20.0" /></font></Label>
+            <Button onAction="#showDashboard" prefWidth="190.0" stylesheets="@../loginDesign.css" text="📊 Tableau de Bord">
+            <font>
+               <Font name="System Bold" size="18.0" />
+            </font>
+            <styleClass>
+               <String fx:value="nav" />
+               <String fx:value="shadow" />
+            </styleClass></Button>
+            <Button onAction="#showPatients" prefWidth="190.0" stylesheets="@../loginDesign.css" text="👥 Patients">
+            <font>
+               <Font size="18.0" />
+            </font>
+            <styleClass>
+               <String fx:value="nav" />
+               <String fx:value="shadow" />
+            </styleClass></Button>
+            <Button onAction="#showTreatments" prefWidth="190.0" stylesheets="@../loginDesign.css" text="💊 Ordonnances">
+            <font>
+               <Font size="18.0" />
+            </font>
+            <styleClass>
+               <String fx:value="nav" />
+               <String fx:value="shadow" />
+            </styleClass></Button>
+            <VBox alignment="BOTTOM_CENTER" prefHeight="250.0" prefWidth="190.0" VBox.vgrow="ALWAYS">
+                <Button onAction="#handleLogout" prefWidth="190.0" styleClass="btn-deco" stylesheets="@../loginDesign.css" text="🚪 Déconnexion">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+            </VBox>
+        </VBox>
+    </left>
+   <center>
+        <VBox alignment="CENTER" spacing="15.0" styleClass="shadow" stylesheets="@../loginDesign.css" BorderPane.alignment="CENTER">
+
+            <HBox alignment="CENTER" spacing="20">
+
+                <VBox alignment="CENTER" styleClass="card-info">
+                    <Label text="📅 Date">
+                  <font>
+                     <Font size="25.0" />
+                  </font></Label>
+                    <Label fx:id="dateLabel" styleClass="card-value" text="--/--/----">
+                  <font>
+                     <Font size="18.0" />
+                  </font></Label>
+                </VBox>
+
+                <VBox alignment="CENTER" styleClass="card-info">
+                    <Label text="🗓 Jour">
+                  <font>
+                     <Font size="25.0" />
+                  </font></Label>
+                    <Label fx:id="dayLabel" styleClass="card-value" text="------">
+                  <font>
+                     <Font size="18.0" />
+                  </font></Label>
+                </VBox>
+
+                <VBox alignment="CENTER" styleClass="card-info">
+                    <Label text="🕒 Heure">
+                  <font>
+                     <Font size="25.0" />
+                  </font></Label>
+                    <Label fx:id="timeLabel" styleClass="card-value" text="00:00:00">
+                  <font>
+                     <Font size="18.0" />
+                  </font></Label>
+                </VBox>
+
+            </HBox>
+         <Line endX="658.5233154296875" endY="1.7787071466445923" startX="94.43045043945312" startY="1.1858047246932983" stroke="#b0bcbc" />
+
+            <ImageView fitHeight="224.0" fitWidth="218.0" preserveRatio="true">
+                <image>
+                    <Image url="@images/logo2-removebg-preview.png" />
+                </image>
+            </ImageView>
+
+            <Label fx:id="lblBienvenue" text="Bonjour Docteur," textFill="#2c3e50">
+                <font>
+                    <Font name="System Bold" size="26.0" />
+                </font>
+            </Label>
+
+            <Label text="Bienvenue dans votre espace de gestion et suivi médical." textFill="#7f8c8d" />
+
+            <Label text="Veuillez sélectionner une option dans le menu de gauche pour commencer." textFill="#95a5a6" />
+
+        </VBox>
+   </center>
+
+
+
+</BorderPane>

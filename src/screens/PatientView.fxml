@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox spacing="15.0" style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screens.PatientController">
+    <padding><Insets bottom="20.0" left="20.0" right="20.0" top="20.0" /></padding>
+    <Label text="👥 Gestion des Patients"><font><Font name="System Bold" size="20.0" /></font></Label>
+
+    <HBox alignment="CENTER_LEFT" spacing="10.0">
+        <Label style="-fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="Rechercher un patient :">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+        <TextField fx:id="txtRecherche" prefWidth="300.0" promptText="Tapez un nom pour filtrer..." style="-fx-background-radius: 5;">
+         <font>
+            <Font size="11.0" />
+         </font></TextField>
+    </HBox>
+
+    <HBox spacing="10.0">
+        <TextField fx:id="txtNom" prefHeight="26.0" prefWidth="179.0" promptText="Nom complet" />
+        <TextField fx:id="txtDate" prefWidth="120.0" promptText="AAAA-MM-JJ" />
+        <TextField fx:id="txtSexe" prefWidth="60.0" promptText="M/F" />
+        <TextField fx:id="txtAllergies" promptText="Allergies (ex: Pénicilline)" HBox.hgrow="ALWAYS" />
+
+        <Button onAction="#addPatient" style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-font-weight: bold;" text="➕ Ajouter">
+         <font>
+            <Font size="10.0" />
+         </font></Button>
+        <Button onAction="#updatePatient" style="-fx-background-color: #f39c12; -fx-text-fill: white; -fx-font-weight: bold;" text="✏ Modifier">
+         <font>
+            <Font size="10.0" />
+         </font></Button>
+        <Button onAction="#deletePatient" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold;" text="🗑 Supprimer">
+         <font>
+            <Font size="10.0" />
+         </font></Button>
+    </HBox>
+
+    <TableView fx:id="tablePatients" onMouseClicked="#handleTableSelection" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colId" prefWidth="50" text="ID" />
+            <TableColumn fx:id="colNom" prefWidth="200" text="Nom" />
+            <TableColumn fx:id="colDate" prefWidth="120" text="Naissance" />
+            <TableColumn fx:id="colSexe" prefWidth="80" text="Sexe" />
+            <TableColumn fx:id="colAllergies" prefWidth="200" text="Allergies" />
+        </columns>
+    </TableView>
+</VBox>
